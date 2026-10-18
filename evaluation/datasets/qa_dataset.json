@@ -1,0 +1,203 @@
+{
+ "description": "Questions over the 3-PDF controlled corpus (build_test_corpus.py). relevant_pages is page-level ground truth; an empty list marks a question the documents cannot answer.",
+ "questions": [
+  {
+   "id": "q01",
+   "type": "factual",
+   "question": "What does ordinary least squares minimise?",
+   "reference": "Ordinary least squares chooses the line that minimises the sum of squared residuals.",
+   "relevant_pages": [
+    {
+     "file": "data_science_regression.pdf",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "q02",
+   "type": "factual",
+   "question": "How is a coefficient interpreted in multiple regression?",
+   "reference": "Each coefficient is the expected change in the response for a one unit increase in that predictor while all other predictors are held constant.",
+   "relevant_pages": [
+    {
+     "file": "data_science_regression.pdf",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "q03",
+   "type": "multi_chunk",
+   "question": "How do adjusted R-squared and cross-validation each help guard against overfitting a regression model?",
+   "reference": "Adjusted R-squared penalises predictors that add no explanatory power, and k-fold cross-validation estimates generalisation error by training on k-1 folds and testing on the remaining fold.",
+   "relevant_pages": [
+    {
+     "file": "data_science_regression.pdf",
+     "page": 2
+    },
+    {
+     "file": "data_science_regression.pdf",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "q04",
+   "type": "technical_term",
+   "question": "What VIF value is a common warning sign of multicollinearity?",
+   "reference": "A VIF above 10.",
+   "relevant_pages": [
+    {
+     "file": "data_science_regression.pdf",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "q05",
+   "type": "technical_term",
+   "question": "How do AIC and BIC differ in how they penalise parameters?",
+   "reference": "Both penalise the number of parameters, but BIC applies a heavier penalty than AIC when the sample is large.",
+   "relevant_pages": [
+    {
+     "file": "statistics_inference.pdf",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "q06",
+   "type": "multi_chunk",
+   "question": "What are two ways to validate or compare regression models mentioned in the notes?",
+   "reference": "K-fold cross-validation estimates generalisation error, and AIC or BIC compare models by rewarding fit while penalising the number of parameters.",
+   "relevant_pages": [
+    {
+     "file": "data_science_regression.pdf",
+     "page": 3
+    },
+    {
+     "file": "statistics_inference.pdf",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "q07",
+   "type": "similar_distractor",
+   "question": "What is the difference between simple regression and multiple regression?",
+   "reference": "Simple regression has exactly one predictor, while multiple regression uses several predictors and interprets each coefficient holding the others constant.",
+   "relevant_pages": [
+    {
+     "file": "data_science_regression.pdf",
+     "page": 1
+    },
+    {
+     "file": "data_science_regression.pdf",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "q08",
+   "type": "technical_term",
+   "question": "What does the F1 score measure?",
+   "reference": "The F1 score is the harmonic mean of precision and recall.",
+   "relevant_pages": [
+    {
+     "file": "ml_clustering_classification.pdf",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "q09",
+   "type": "factual",
+   "question": "What does the central limit theorem state?",
+   "reference": "The distribution of the sample mean approaches a normal distribution as the sample size grows, whatever the population distribution, provided the variance is finite.",
+   "relevant_pages": [
+    {
+     "file": "statistics_inference.pdf",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "q10",
+   "type": "similar_distractor",
+   "question": "Does a 95 percent confidence interval mean there is a 95 percent probability the parameter lies inside the computed interval?",
+   "reference": "No. The 95 percent refers to the procedure capturing the true parameter in 95 percent of repeated samples, not to the probability for one specific interval.",
+   "relevant_pages": [
+    {
+     "file": "statistics_inference.pdf",
+     "page": 2
+    }
+   ]
+  },
+  {
+   "id": "q11",
+   "type": "factual",
+   "question": "How do ridge and lasso regression differ?",
+   "reference": "Ridge adds an L2 penalty that shrinks coefficients but rarely makes them zero; lasso adds an L1 penalty that can set coefficients exactly to zero and so performs feature selection.",
+   "relevant_pages": [
+    {
+     "file": "data_science_regression.pdf",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "q12",
+   "type": "technical_term",
+   "question": "How is the Gini impurity of a decision tree node defined?",
+   "reference": "One minus the sum of squared class proportions.",
+   "relevant_pages": [
+    {
+     "file": "ml_clustering_classification.pdf",
+     "page": 3
+    }
+   ]
+  },
+  {
+   "id": "q13",
+   "type": "factual",
+   "question": "How can the number of clusters in k-means be chosen?",
+   "reference": "Use the elbow method on the within-cluster sum of squares, and check separation with the silhouette score.",
+   "relevant_pages": [
+    {
+     "file": "ml_clustering_classification.pdf",
+     "page": 1
+    }
+   ]
+  },
+  {
+   "id": "q14",
+   "type": "unanswerable",
+   "question": "What learning rate is typically used in gradient boosting machines?",
+   "reference": "The documents do not cover gradient boosting.",
+   "relevant_pages": []
+  },
+  {
+   "id": "q15",
+   "type": "unanswerable",
+   "question": "Who invented the Gini coefficient used to measure income inequality?",
+   "reference": "The documents do not cover income inequality; they only use Gini impurity for decision trees.",
+   "relevant_pages": []
+  },
+  {
+   "id": "q16",
+   "type": "ambiguous",
+   "question": "How does the penalty work?",
+   "reference": "Ambiguous: the notes mention an L2 penalty in ridge, an L1 penalty in lasso, and parameter penalties in AIC/BIC.",
+   "relevant_pages": [
+    {
+     "file": "data_science_regression.pdf",
+     "page": 3
+    },
+    {
+     "file": "statistics_inference.pdf",
+     "page": 3
+    }
+   ]
+  }
+ ]
+}

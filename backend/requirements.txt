@@ -1,0 +1,18 @@
+# Core API
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic>=2.7
+pydantic-settings>=2.3
+python-multipart>=0.0.9
+
+# RAG
+pymupdf>=1.24
+chromadb>=1.0          # tested with 1.5.x
+rank-bm25>=0.2.2
+numpy>=1.26
+sentence-transformers>=3.0   # local embeddings + cross-encoder reranker (pulls in PyTorch, CPU is fine)
+openai>=1.40           # OpenAI-compatible client (works with any compatible provider)
+
+# Tests
+pytest>=8.0
+httpx>=0.27

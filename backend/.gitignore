@@ -1,0 +1,25 @@
+# secrets
+.env
+*.env
+!.env.example
+# python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# runtime data (private documents, vectors)
+backend/data/*
+backend/chroma_db/*
+!backend/data/.gitkeep
+!backend/chroma_db/.gitkeep
+# evaluation outputs (regenerate locally)
+evaluation/results/*
+!evaluation/results/.gitkeep
+# node
+node_modules/
+frontend/dist/
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/

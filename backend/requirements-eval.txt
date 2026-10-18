@@ -1,0 +1,8 @@
+# Only needed for RAGAS answer-quality evaluation. Versions below were verified to import together.
+-r requirements.txt
+ragas==0.3.9
+langchain-core>=0.3,<1.0
+langchain-community>=0.3,<0.4
+langchain>=0.3,<1.0
+langchain-openai>=0.3,<1.0
+pandas>=2.0

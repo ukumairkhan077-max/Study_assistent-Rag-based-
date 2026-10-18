@@ -1,0 +1,37 @@
+:root {
+  --bg: #f5f6fb;
+  --surface: #ffffff;
+  --surface-2: #eef0f8;
+  --border: #dde1ee;
+  --text: #1c2033;
+  --muted: #5d647d;
+  --primary: #4f46e5;
+  --primary-dark: #4038c4;
+  --primary-soft: #e8e7fd;
+  --ok: #0f9d6b; --ok-soft: #dcf5ec;
+  --warn: #b7791f; --warn-soft: #fdf3dc;
+  --bad: #c0392b; --bad-soft: #fbe4e1;
+  --info: #2563eb; --info-soft: #e0ebff;
+  --side: #181b2e; --side-text: #c9cdea;
+  --radius: 12px;
+  --shadow: 0 1px 2px rgba(20, 24, 50, .06), 0 4px 14px rgba(20, 24, 50, .05);
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text);
+  line-height: 1.5;
+}
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+body { background: var(--bg); }
+h1 { font-size: 1.4rem; margin: 0 0 1rem; }
+h2 { font-size: 1.05rem; margin: 0 0 .75rem; }
+h3 { font-size: .95rem; margin: 0; }
+h4 { font-size: .85rem; margin: 0 0 .5rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+p { margin: .4rem 0; }
+code, .mono { font-family: ui-monospace, 'Cascadia Mono', Consolas, monospace; font-size: .8em; }
+code { background: var(--surface-2); padding: 1px 5px; border-radius: 4px; margin-right: 4px; }
+small { color: var(--muted); }
+button, input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.spin { animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
