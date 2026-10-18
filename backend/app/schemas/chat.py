@@ -64,7 +64,7 @@ class ChatResponse(BaseModel):
 
 
 class RetrieveRequest(BaseModel):
-    query: str = Field(min_length=1, max_length=2000)
+    query: str = Field(min_length=1, max_length=2500)
     retrieval: RetrievalConfig = RetrievalConfig()
 
 
